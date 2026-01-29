@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLMNR Poisoning | Bryan Fox</title>
+    <title>21   FTP | Bryan Fox</title>
     <link rel="stylesheet" href="../../../../styles.css">
     <style>
         pre { background: #0d1117; padding: 1rem; border: 1px solid #30363d; border-radius: 6px; overflow-x: auto; color: #c9d1d9; font-family: monospace; }
@@ -31,17 +31,22 @@
     </nav>
     <main class="container">
         <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
-            link local multicast name resolution
-What is the protocol?
-	used to identify hosts when DNS fails to do so 
-	previously NBT-NS
-	key flaw is that the services utilize a user's username and NTLMv2 hash when appropriately responding to
-using responder
-	sudo responder -I (interface) -dwp
-	-d DHCP
-	-w wpad proxy server
-	-P ProxyAuth
-	-v verbose
+            <h1>21 - FTP</h1>
+<ul><li>can be used with anonmyous login</li></ul>
+<h2>scanning port</h2>
+<pre>
+sudo nmap -sV -p21 -sC -A $target --script ftp*
+</pre><p></p><h3>helpful commands</h3>
+<ul><li>Trace</li><li>Status's</li><li>Debug</li><li>get </li><li>Downlaods files</li><li>put</li><li>uploads files</li></ul><p></p><h3>conncting to port</h3>
+<pre>
+sudo ftp $target <p></p><h2>if you have creds </h2>
+ftp &lt;user&gt;@$target<p></p><h2>if ftp on non-standard port </h2>
+ftp $target &lt;port&gt;
+</pre><p></p><h3>downloading all files</h3>
+<ul><li>if you have creds, use following wget command to dump all files in the share</li></ul>
+<pre>
+wget -m --no-passive ftp://anonymous:anonymous@$target
+</pre>
 
             <div style="margin-top: 4rem; text-align: center;">
                 <a href="../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>

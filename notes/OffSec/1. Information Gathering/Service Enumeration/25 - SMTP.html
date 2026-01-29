@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLMNR Poisoning | Bryan Fox</title>
+    <title>25   SMTP | Bryan Fox</title>
     <link rel="stylesheet" href="../../../../styles.css">
     <style>
         pre { background: #0d1117; padding: 1rem; border: 1px solid #30363d; border-radius: 6px; overflow-x: auto; color: #c9d1d9; font-family: monospace; }
@@ -31,17 +31,22 @@
     </nav>
     <main class="container">
         <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
-            link local multicast name resolution
-What is the protocol?
-	used to identify hosts when DNS fails to do so 
-	previously NBT-NS
-	key flaw is that the services utilize a user's username and NTLMv2 hash when appropriately responding to
-using responder
-	sudo responder -I (interface) -dwp
-	-d DHCP
-	-w wpad proxy server
-	-P ProxyAuth
-	-v verbose
+            <h2>overview</h2>
+The Simple Mail Transfer Protocol (SMTP) is a protocol for sending emails in an IP network
+<h2>commands</h2>
+AUTH PLAIN	- AUTH is a service extension used to authenticate the client.
+HELO	- The client logs in with its computer name and thus starts the session.
+MAIL FROM	- The client names the email sender.
+RCPT TO	- The client names the email recipient.
+DATA	- The client initiates the transmission of the email.
+RSET	- The client aborts the initiated transmission but keeps the connection between client and server.
+VRFY	- The client checks if a mailbox is available for message transfer.
+EXPN	- The client also checks if a mailbox is available for messaging with this command.
+NOOP	- The client requests a response from the server to prevent disconnection due to time-out.
+QUIT	- The client terminates the session.<p></p><h2>help</h2>
+<pre>
+sudo nmap $target -sC -sV -p25<p></p>sudo nmap $target -p25 --script smtp-open-relay -v
+</pre>
 
             <div style="margin-top: 4rem; text-align: center;">
                 <a href="../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLMNR Poisoning | Bryan Fox</title>
+    <title>88   Kerberos | Bryan Fox</title>
     <link rel="stylesheet" href="../../../../styles.css">
     <style>
         pre { background: #0d1117; padding: 1rem; border: 1px solid #30363d; border-radius: 6px; overflow-x: auto; color: #c9d1d9; font-family: monospace; }
@@ -31,17 +31,13 @@
     </nav>
     <main class="container">
         <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
-            link local multicast name resolution
-What is the protocol?
-	used to identify hosts when DNS fails to do so 
-	previously NBT-NS
-	key flaw is that the services utilize a user's username and NTLMv2 hash when appropriately responding to
-using responder
-	sudo responder -I (interface) -dwp
-	-d DHCP
-	-w wpad proxy server
-	-P ProxyAuth
-	-v verbose
+            <h3>Common exploits</h3>
+<ul><li>kerberos roasting</li><li>This is where we can take the domain and user name (SPN) and try to get a TGT (Ticket Granting ticket) We can then attempt to crask the hash to get the user password (This will be exachnegd in the kerberos authenticaiton)</li></ul>
+ 
+#### asperosting
+<pre>
+GetNPUsers &lt;domain&gt; -dc.ip $target -usersfile &lt;filename&gt; -outfile &lt;filename&gt;
+</pre>
 
             <div style="margin-top: 4rem; text-align: center;">
                 <a href="../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>

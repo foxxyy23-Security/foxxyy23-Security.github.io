@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLMNR Poisoning | Bryan Fox</title>
-    <link rel="stylesheet" href="../../../../styles.css">
+    <title>user | Bryan Fox</title>
+    <link rel="stylesheet" href="../../../../../styles.css">
     <style>
         pre { background: #0d1117; padding: 1rem; border: 1px solid #30363d; border-radius: 6px; overflow-x: auto; color: #c9d1d9; font-family: monospace; }
         code { color: var(--accent-secondary); }
@@ -21,30 +21,57 @@
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <a href="../../../../index.html" class="nav-logo">foxxyy23</a>
+            <a href="../../../../../index.html" class="nav-logo">foxxyy23</a>
             <div class="nav-links">
-                <a href="../../../../index.html" class="nav-link">Home</a>
-                <a href="../../../../notebook.html" class="nav-link active">Notebook</a>
-                <a href="../../../../blog.html" class="nav-link">Blog</a>
+                <a href="../../../../../index.html" class="nav-link">Home</a>
+                <a href="../../../../../notebook.html" class="nav-link active">Notebook</a>
+                <a href="../../../../../blog.html" class="nav-link">Blog</a>
             </div>
         </div>
     </nav>
     <main class="container">
         <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
-            link local multicast name resolution
-What is the protocol?
-	used to identify hosts when DNS fails to do so 
-	previously NBT-NS
-	key flaw is that the services utilize a user's username and NTLMv2 hash when appropriately responding to
-using responder
-	sudo responder -I (interface) -dwp
-	-d DHCP
-	-w wpad proxy server
-	-P ProxyAuth
-	-v verbose
+            who are we? what permissions do we have? what can we do 
+<pre>
+whoami
+ID
+</pre>
+<h2>sudo permissions</h2>
+<pre>
+sudo -l
+</pre>
+<h2>file that stores hashes</h2>
+<pre>
+cat /etc/passwd
+</pre>
+<h2>File that stores passwrods</h2>
+<pre>
+/etc/shadow
+</pre>
+<h2>history of all commands ran in bash</h2>
+<pre>
+history
+</pre>
+<h2>login to sudo account</h2>
+<pre>
+sudo su -
+</pre>
+<h2>find group ID</h2>
+<pre>
+find / -group &lt;group&gt; 2&gt;/dev/null
+</pre>
+find anything with that group name in the entire direcory
+<h2>permissions of a file</h2>
+<pre>
+ls -la &lt;file/path&gt;
+</pre>
+<h2>file type</h2>
+<pre>
+file &lt;file/path&gt;
+</pre>
 
             <div style="margin-top: 4rem; text-align: center;">
-                <a href="../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>
+                <a href="../../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>
             </div>
         </article>
     </main>
