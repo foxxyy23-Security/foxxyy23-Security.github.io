@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Bryan Fox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">foxxyy23</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="notebook.html" class="nav-link">Notebook</a>
+                <a href="blog.html" class="nav-link active">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero" style="min-height: 40vh; align-items: center; text-align: center;">
+            <h1>Engineering Log</h1>
+            <p>Thoughts on defense, automation, and the human side of security.</p>
+        </section>
+
+        <section id="posts">
+            
+            <!-- Article Entry -->
+            <article class="experience-item" style="border-left: none; border-top: 4px solid var(--accent-primary);">
+                <span class="role-meta">Jan 29, 2026</span>
+                <h2 style="margin-top: 0.5rem; font-size: 1.8rem; border-bottom: none;"><a href="#" style="color: var(--text-primary);">Why SOPs Fail (And How to Fix Them)</a></h2>
+                <p>
+                    Most Standard Operating Procedures collect dust because they are written for compliance, not for operators. Here is how I structure response guides that L1 analysts actually use during a crisis.
+                </p>
+                <a href="#" class="cta-button" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+
+            <!-- Article Entry -->
+            <article class="experience-item" style="border-left: none; border-top: 4px solid var(--accent-secondary);">
+                <span class="role-meta">Dec 15, 2025</span>
+                <h2 style="margin-top: 0.5rem; font-size: 1.8rem; border-bottom: none;"><a href="#" style="color: var(--text-primary);">Automating SentinelOne Triage with Python</a></h2>
+                <p>
+                    Alert fatigue kills morale. In this post, I break down a simple script I wrote to auto-enrich SentinelOne threats with VirusTotal data before a human ever looks at the ticket.
+                </p>
+                <a href="#" class="cta-button" style="margin-top: 1rem; padding: 0.5rem 1rem; font-size: 0.9rem;">Read More</a>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

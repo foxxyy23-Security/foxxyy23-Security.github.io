@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook | Bryan Fox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">foxxyy23</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="notebook.html" class="nav-link active">Notebook</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero" style="min-height: 40vh; align-items: center; text-align: center;">
+            <h1>The Notebook</h1>
+            <p>A collection of cheat sheets, command references, and knowledge base entries.</p>
+        </section>
+
+        <section id="notes-grid">
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+                
+                <!-- Category: Incident Response -->
+                <div class="experience-item" style="border-left: 4px solid var(--accent-secondary);">
+                    <h3 style="margin-bottom: 0.5rem;">Incident Response</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Workflows and standard procedures for triage.</p>
+                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li><a href="#">Windows Event ID Cheat Sheet</a></li>
+                        <li><a href="#">Phishing Analysis Workflow</a></li>
+                        <li><a href="#">O365 Compromise Checklist</a></li>
+                    </ul>
+                </div>
+
+                <!-- Category: Engineering -->
+                <div class="experience-item" style="border-left: 4px solid var(--accent-primary);">
+                    <h3 style="margin-bottom: 0.5rem;">Engineering & Automation</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Snippets for Python, APIs, and SOAR.</p>
+                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li><a href="#">SentinelOne API Quick Start</a></li>
+                        <li><a href="#">Regex for IOC Extraction</a></li>
+                        <li><a href="#">Tenable Asset Tagging Logic</a></li>
+                    </ul>
+                </div>
+
+                <!-- Category: Red Team / Testing -->
+                <div class="experience-item" style="border-left: 4px solid #f43f5e;">
+                    <h3 style="margin-bottom: 0.5rem;">Offensive Security</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Reference notes from CTFs and testing.</p>
+                    <ul style="padding-left: 1.2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li><a href="#">Nmap Scan Types</a></li>
+                        <li><a href="#">Active Directory Enumeration</a></li>
+                        <li><a href="#">Privilege Escalation Basics</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
