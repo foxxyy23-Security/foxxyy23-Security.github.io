@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why SOPs Fail | Bryan Fox</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo">foxxyy23</a>
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../notebook.html" class="nav-link">Notebook</a>
+                <a href="../blog.html" class="nav-link active">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
+            <span class="role-meta">Jan 29, 2026</span>
+            <h1 style="font-size: 2.5rem; margin-bottom: 2rem;">Why SOPs Fail (And How to Fix Them)</h1>
+            
+            <div class="about-content">
+                <p>
+                    I’ve seen it a dozen times. A new analyst joins the team, an alert fires, and they freeze. They open the "Standard Operating Procedure" (SOP), but instead of a checklist, they find a 40-page Word document full of compliance jargon, out-of-date screenshots, and zero actionable steps.
+                </p>
+                <p>
+                    Most SOPs fail because they are written for auditors, not for operators. In the heat of an incident, no one wants to read a novel. They want to know: <em>What do I do right now?</em>
+                </p>
+
+                <h2 style="margin-top: 2rem; color: var(--accent-secondary);">The "Pilot's Checklist" Approach</h2>
+                <p>
+                    When an engine fails at 30,000 feet, pilots don't read a manual on thermodynamics. They pull out a "Quick Reference Handbook" (QRH). It’s bold, it’s brief, and it saves lives.
+                </p>
+                <p>
+                    Cybersecurity SOPs should be the same. Here is my structure for an effective response guide:
+                </p>
+
+                <ul style="padding-left: 1.5rem; margin-top: 1rem; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><strong>Trigger:</strong> Exactly what alert name or condition starts this process?</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Triage (The "Kill" Step):</strong> 3 steps to determine if this is a False Positive. If yes, close it. If no, proceed.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Containment:</strong> The exact command to isolate the host. Not "isolate the host," but <code>sentinelctl isolate -hostname &lt;ID&gt;</code>.</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>Escalation:</strong> Who do I call if this goes sideways?</li>
+                </ul>
+
+                <h2 style="margin-top: 2rem; color: var(--accent-secondary);">Updating the Culture</h2>
+                <p>
+                    The best SOP is a living document. I encourage my team to "redline" documents during an incident. If a step was wrong, mark it. If a screenshot changed, flag it. We review these notes in our post-mortem, ensuring the next person doesn't trip over the same wire.
+                </p>
+                <p>
+                    <strong>Empower the defense</strong> by giving them tools that actually work.
+                </p>
+            </div>
+
+            <div style="margin-top: 4rem; border-top: 1px solid var(--card-bg); padding-top: 2rem; text-align: center;">
+                <a href="../blog.html" class="btn btn-outline">← Back to Blog</a>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>
