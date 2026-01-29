@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response Notes | Bryan Fox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">foxxyy23</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="notebook.html" class="nav-link active">Notebook</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero" style="min-height: 30vh; align-items: flex-start; padding-bottom: 1rem;">
+            <h1>Incident Response</h1>
+            <p>Workflows, checklists, and references for triage and containment.</p>
+        </section>
+
+        <section id="ir-notes">
+            
+            <h2 style="color: var(--accent-secondary); border-bottom: 1px solid var(--card-bg); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">Windows & Endpoint</h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+                <!-- Will link to migrated notes later if applicable, using placeholders for structure -->
+                <a href="#" class="experience-item" style="display: block; border-left: 4px solid var(--accent-secondary); text-decoration: none;">
+                    <h3 style="font-size: 1.1rem; color: var(--text-primary); margin: 0;">Windows Event IDs</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Key security events for lateral movement and persistence.</p>
+                </a>
+                <a href="notes/OffSec/4. Post-Expliotation/Pri Esc/Windows/Enumeration.html" class="experience-item" style="display: block; border-left: 4px solid var(--accent-secondary); text-decoration: none;">
+                    <h3 style="font-size: 1.1rem; color: var(--text-primary); margin: 0;">Windows Enumeration</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Commands to identify user activity and processes.</p>
+                </a>
+            </div>
+
+            <h2 style="color: var(--accent-secondary); border-bottom: 1px solid var(--card-bg); padding-bottom: 0.5rem; margin-bottom: 1.5rem; margin-top: 3rem;">Cloud & Identity</h2>
+            <div class="skills-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+                <a href="notes/OffSec/3. Exploitation/O365.html" class="experience-item" style="display: block; border-left: 4px solid var(--accent-secondary); text-decoration: none;">
+                    <h3 style="font-size: 1.1rem; color: var(--text-primary); margin: 0;">O365 Attacks</h3>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">Common attack vectors for Office 365.</p>
+                </a>
+            </div>
+
+        </section>
+
+        <div style="margin-top: 4rem; text-align: center;">
+            <a href="notebook.html" class="btn btn-outline">← Back to Dashboard</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
