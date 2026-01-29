@@ -1,32 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>foxxyy23-Security | Personal Brand</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            text-align: center;
-            border: 1px solid #30363d;
-            padding: 2rem;
-            border-radius: 6px;
-        }
-        h1 { color: #58a6ff; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foxxyy23-Security | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>foxxyy23-Security</h1>
-        <p>Welcome to my personal brand website.</p>
-        <p>Currently under construction.</p>
-    </div>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="hero-subtitle">Hi, my name is</span>
+            <h1>foxxyy23-Security</h1>
+            <h3>I build secure and scalable digital experiences.</h3>
+            <p style="max-width: 600px; margin-top: 1.5rem;">
+                I'm a security-focused professional specializing in protecting digital assets and building resilient systems.
+            </p>
+            <a href="mailto:your-email@example.com" class="cta-button">Get In Touch</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>01. About Me</h2>
+            <div class="about-content">
+                <p>
+                    Hello! I'm foxxyy23, a passionate security enthusiast and developer. My interest in technology started back when I decided to try hacking my first game — turns out that taught me a lot about how software actually works!
+                </p>
+                <p>
+                    Fast-forward to today, and I've had the privilege of working on various projects that challenge me to think critically about security and performance. My main focus these days is building accessible, inclusive products and digital experiences ensuring they are secure by design.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>02. Where I've Worked</h2>
+            
+            <div class="experience-item">
+                <h3>Senior Security Analyst</h3>
+                <span class="role-meta">Tech Corp Inc. | 2022 - Present</span>
+                <p>Leading vulnerability assessments and penetration testing for enterprise applications. Spearheaded the adoption of DevSecOps practices across engineering teams.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Security Engineer</h3>
+                <span class="role-meta">StartUp verify | 2020 - 2022</span>
+                <p>Implemented automated security scanning in CI/CD pipelines. Managed incident response and improved system hardening protocols.</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>03. Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Network Security</div>
+                <div class="skill-tag">Penetration Testing</div>
+                <div class="skill-tag">Python & Bash</div>
+                <div class="skill-tag">Linux Administration</div>
+                <div class="skill-tag">Cloud Security (AWS)</div>
+                <div class="skill-tag">Incident Response</div>
+                <div class="skill-tag">Web App Security</div>
+                <div class="skill-tag">Cryptography</div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" style="text-align: center; padding-bottom: 8rem;">
+            <h2>04. What's Next?</h2>
+            <h1 style="font-size: 2.5rem; margin: 1rem 0;">Get In Touch</h1>
+            <p style="margin: 0 auto; max-width: 600px;">
+                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open.
+            </p>
+            
+            <div class="social-links" style="justify-content: center; margin-top: 3rem;">
+                <a href="https://github.com/foxxyy23-Security" class="social-link" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" class="social-link" target="_blank">LinkedIn</a>
+                <a href="mailto:email@example.com" class="social-link">Email</a>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>
