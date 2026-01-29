@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMB Enumeration | Bryan Fox</title>
+    <link rel="stylesheet" href="../../../../styles.css">
+    <style>
+        pre { background: #0d1117; padding: 1rem; border: 1px solid #30363d; border-radius: 6px; overflow-x: auto; color: #c9d1d9; font-family: monospace; }
+        code { color: var(--accent-secondary); }
+        h2 { margin-top: 2rem; color: var(--accent-primary); border-bottom: 1px solid var(--card-bg); padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="../../../../index.html" class="nav-logo">foxxyy23</a>
+            <div class="nav-links">
+                <a href="../../../../index.html" class="nav-link">Home</a>
+                <a href="../../../../notebook.html" class="nav-link active">Notebook</a>
+                <a href="../../../../blog.html" class="nav-link">Blog</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <article style="max-width: 800px; margin: 0 auto; padding-top: 2rem;">
+            <h1>SMB Enumeration (Port 445)</h1>
+            
+            <h2>Listing Shares</h2>
+            
+            <h3>smbclient</h3>
+            <pre>smbclient -L $target -N  # Null Session</pre>
+            <pre>smbclient \\$target\$share -U &lt;username&gt;</pre>
+
+            <h3>SMBMap</h3>
+            <pre>smbmap -H $target</pre>
+
+            <h3>CrackMapExec / NetExec</h3>
+            <pre>netexec smb $target --shares -u '' -p ''</pre>
+
+            <h2>User Enumeration</h2>
+            <p>Using NetExec (formerly CrackMapExec) to find users and brute force RIDs.</p>
+            <pre>netexec smb $target -u '' -p '' --users
+netexec smb $target -u '' -p '' --rid-brute</pre>
+
+            <h2>Connecting to a Share</h2>
+            <pre>smbclient //$target/&lt;share_name&gt; -U &lt;user&gt;</pre>
+
+            <h2>Impacket</h2>
+            <p>Dump domain info via SAMR:</p>
+            <pre>samrdump.py $target</pre>
+
+            <div style="margin-top: 4rem; text-align: center;">
+                <a href="../../../../notebook-full.html" class="btn btn-outline">← Back to Archive</a>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
